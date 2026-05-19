@@ -1,0 +1,13 @@
+train: /home/hnucv/yolo_person_overhead/dataset/train/images
+val: /home/hnucv/yolo_person_overhead/dataset/valid/images
+test: /home/hnucv/yolo_person_overhead/dataset/test/images
+
+nc: 1
+names: ['person']
+
+roboflow:
+  workspace: riccardo-kxtut
+  project: overhead-person-szky0
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/riccardo-kxtut/overhead-person-szky0/dataset/3
