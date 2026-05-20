@@ -1,0 +1,10 @@
+# 核心深度学习框架 (Core Deep Learning Frameworks)
+ultralytics
+torch
+torchvision
+
+# 辅助数据处理与可视化 (Data Processing & Visualization)
+matplotlib
+numpy
+opencv-python
+pandas
