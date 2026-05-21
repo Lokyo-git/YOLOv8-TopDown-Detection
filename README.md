@@ -55,3 +55,45 @@ We systematically recorded the training trajectory under strict variable-control
 > 👉 **[Click Here to View the Full Live Experiment Log on Google Drive]** *(https://docs.google.com/spreadsheets/d/1JWhuS_KHb5iufRpdD68kEpIaFSlIHdOvs6Xkq9JZImA/edit?usp=drive_link)*
 
 ---
+
+## 📂 4. Repository Structure & Usage Guide
+
+### 4.1 Directory Tree
+Below is the clean and modular structure of this repository (large 1.1GB weights and raw datasets are securely backed up on cloud storage to maintain a lightweight codebase):
+
+```text
+YOLOv8-TopDown-Detection/
+├── assets/                  # Training curves, logs, and confusion matrix
+│   ├── F1_curve.png
+│   ├── confusion_matrix_normalized.png
+│   ├── results.csv          # Complete training metrics log
+│   ├── results.png          # Training loss and metric curves
+│   ├── val_batch0_labels.jpg
+│   └── val_batch0_pred.jpg
+├── config/                  # Configuration files
+│   └── data.yaml            # Dataset path and class definitions
+├── src/                     # Source code for the project
+│   ├── extract_frame.py     # Script for video frame extraction
+│   ├── train.py             # Script for initiating training loops
+│   └── test.py              # Script for real-time inference/testing
+├── .gitignore               # Excludes large .pt weights and local cache
+└── requirements.txt         # Minimal environment dependencies
+
+### 4.2 How to Run
+Step 1: Clone the Repository & Install Dependencies
+Ensure you have Python 3.8+ and PyTorch installed, then set up the minimal environment:
+
+Bash
+git clone [https://github.com/Lokyo-git/YOLOv8-TopDown-Detection.git](https://github.com/Lokyo-git/YOLOv8-TopDown-Detection.git)
+cd YOLOv8-TopDown-Detection
+pip install -r requirements.txt
+Step 2: Execute Augmented Training (Phase v2.0)
+To replicate our robust model training with spatial and illumination augmentations, run:
+
+Bash
+python src/train.py
+Step 3: Run Live Inference (Real-time Detection)
+To deploy the trained model for overhead intrusion checking on custom factory video feeds:
+
+Bash
+python src/test.py
