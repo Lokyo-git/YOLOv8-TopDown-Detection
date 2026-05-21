@@ -79,21 +79,26 @@ YOLOv8-TopDown-Detection/
 ├── .gitignore               # Excludes large .pt weights and local cache
 └── requirements.txt         # Minimal environment dependencies
 
+
 ### 4.2 How to Run
-Step 1: Clone the Repository & Install Dependencies
+
+#### Step 1: Clone the Repository & Install Dependencies
 Ensure you have Python 3.8+ and PyTorch installed, then set up the minimal environment:
 
-Bash
+```bash
 git clone [https://github.com/Lokyo-git/YOLOv8-TopDown-Detection.git](https://github.com/Lokyo-git/YOLOv8-TopDown-Detection.git)
 cd YOLOv8-TopDown-Detection
 pip install -r requirements.txt
-Step 2: Execute Augmented Training (Phase v2.0)
+
+#### Step 2: Execute Augmented Training (Phase v2.0)
 To replicate our robust model training with spatial and illumination augmentations, run:
 
-Bash
+```bash
 python src/train.py
-Step 3: Run Live Inference (Real-time Detection)
+
+#### Step 3: Run Live Inference (Real-time Detection)
 To deploy the trained model for overhead intrusion checking on custom factory video feeds:
 
-Bash
+```bash
 python src/test.py
+---
