@@ -1,4 +1,5 @@
 # YOLOv8-TopDown-Detection
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python) ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c?logo=pytorch) ![YOLO](https://img.shields.io/badge/Ultralytics-YOLOv8-blueviolet) ![License](https://img.shields.io/badge/License-MIT-green)
 > **Real-time Overhead Intrusion Detection System for Industrial Safety Automation at Lens Technology**
 
 ---
@@ -30,7 +31,7 @@ The pipeline specifically addresses **illumination robustness** and **spatial va
 * **Random Rotation**: Replicates multi-angle worker entry vectors from an overhead view.
 * **Brightness Adjustment**: Simulates real-world workshop lighting fluctuations (shadows, reflections from machinery, and day/night shifts).
 
-------
+---
 
 ## ⚙️ 3. Model Configuration & Benchmarking (Ablation Study)
 
@@ -46,13 +47,21 @@ We systematically recorded the training trajectory under strict variable-control
 | **v1.0 (Baseline)** | YOLOv8n | None (Default Parameters) | **100.0%** | 99.7% | 99.5% | 54.7% | Overfitted (Sanity Check) |
 | **v2.0 (Augmented)** | YOLOv8n | Mosaic, Mixup, Rotation, Brightness | 82.4% | **94.1%** | **96.8%** | **51.8%** | **Robust & Deployable** |
 
+### 📈 Training Trajectory & Analytics
+<table>
+  <tr>
+    <td><img src="assets/results.png" width="400" alt="Training Curves"></td>
+    <td><img src="assets/confusion_matrix_normalized.png" width="400" alt="Confusion Matrix"></td>
+  </tr>
+</table>
+
 ### 🔍 Performance Analysis & Engineering Insights:
 * **The Baseline Artifact (v1.0)**: Achieving `100.0%` precision and `99.5%` mAP50 on the benchmark dataset strongly indicated **severe environment-specific overfitting**. The model was memorizing the static backgrounds rather than general human features.
 * **The Augmented Breakthrough (v2.0)**: By applying heavy spatial and illumination adjustments, we purposely challenged the model. Although the metrics slightly adjusted downward to a realistic level (mAP50: **96.8%**), the model's **generalization capability and anti-interference robustness** improved exponentially. This prepares the system perfectly for unpredictable real-world workshop conditions.
 
 > 📊 **Live Tracking Note**: 
 > The complete, step-by-step hyperparameter tuning log and training history are hosted on our cloud tracker.
-> 👉 **[Click Here to View the Full Live Experiment Log on Google Drive]** *(https://docs.google.com/spreadsheets/d/1JWhuS_KHb5iufRpdD68kEpIaFSlIHdOvs6Xkq9JZImA/edit?usp=drive_link)*
+> 👉 **[Click Here to View the Full Live Experiment Log on Google Drive] (https://docs.google.com/spreadsheets/d/1JWhuS_KHb5iufRpdD68kEpIaFSlIHdOvs6Xkq9JZImA/edit?usp=drive_link)**
 
 ---
 
@@ -86,7 +95,7 @@ YOLOv8-TopDown-Detection/
 Ensure you have Python 3.8+ and PyTorch installed, then set up the minimal environment:
 
 ```bash
-git clone [https://github.com/Lokyo-git/YOLOv8-TopDown-Detection.git](https://github.com/Lokyo-git/YOLOv8-TopDown-Detection.git)
+git clone https://github.com/Lokyo-git/YOLOv8-TopDown-Detection.git
 cd YOLOv8-TopDown-Detection
 pip install -r requirements.txt
 ```
