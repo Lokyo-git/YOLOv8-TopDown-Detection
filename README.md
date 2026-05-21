@@ -78,7 +78,7 @@ YOLOv8-TopDown-Detection/
 │   └── test.py              # Script for real-time inference/testing
 ├── .gitignore               # Excludes large .pt weights and local cache
 └── requirements.txt         # Minimal environment dependencies
-
+```
 
 ### 4.2 How to Run
 
