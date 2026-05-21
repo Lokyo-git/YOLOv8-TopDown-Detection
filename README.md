@@ -112,4 +112,5 @@ To deploy the trained model for overhead intrusion checking on custom factory vi
 
 ```bash
 python src/test.py
+```
 ---
