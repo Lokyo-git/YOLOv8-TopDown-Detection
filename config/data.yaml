@@ -1,6 +1,6 @@
-train: /home/hnucv/yolo_person_overhead/dataset/train/images
-val: /home/hnucv/yolo_person_overhead/dataset/valid/images
-test: /home/hnucv/yolo_person_overhead/dataset/test/images
+train: ../datasets/overhead_person/train/images
+val: ../datasets/overhead_person/valid/images
+test: ../datasets/overhead_person/test/images
 
 nc: 1
 names: ['person']

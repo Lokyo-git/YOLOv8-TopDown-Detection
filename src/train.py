@@ -5,7 +5,7 @@ if __name__ == '__main__':
     model = YOLO('yolov8n.pt')
 
     results = model.train(
-        data='/home/hnucv/yolo_person_overhead/data.yaml',
+        data='config/data.yaml',
         epochs=80,
         imgsz=640,
         batch=16,
